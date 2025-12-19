@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  background: linear-gradient(to right, $basic-white 50%, $basic-green 50%);
   min-height: 580px;
   padding: 40px 100px;
+  background: linear-gradient(to right, $basic-white 50%, $basic-green 50%);
 }
 
 .hero__title {

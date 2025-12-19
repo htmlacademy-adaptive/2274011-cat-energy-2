@@ -28,9 +28,8 @@
 }
 
 .additional__title-wrapper {
-  position: relative;
-
   @include container;
+  position: relative;
   padding: 0;
 
   @include tablet {
@@ -44,16 +43,14 @@
 
 .additional__title {
   @include title;
-  padding: 0 40px 0 20px;
-  margin-bottom: 36px;
   display: inline-block;
+  margin-bottom: 36px;
+  padding: 0 40px 0 20px;
   background-color: $basic-white;
 
   @include tablet {
-    padding-right: 40px;
+    margin-bottom: 82px;
     padding-left: 40px;
-
-    margin-bottom: 67px;
   }
 
   @include desktop {
@@ -62,20 +59,18 @@
 }
 
 .additional__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: grid;
-  gap: 21px;
-  padding-top: 13px;
-  margin-bottom: 47px;
-  border-top: 1px solid #cdcdcd;
+  gap: 7px;
+  margin: 0 0 35px;
+  padding: 13px 0 0;
+  list-style: none;
+  border-top: 1px solid $grey-border-light;
 
   @include tablet {
-    gap: 0;
+    gap: 4px;
     margin-bottom: 70px;
-    border: 1px solid #cdcdcd;
     padding: 0;
+    border: 1px solid $grey-border-light;
   }
 
   @include desktop {
@@ -89,31 +84,30 @@
   grid-template-columns: 1fr auto;
   gap: 13px;
   align-items: center;
-  color: $dark-grey;
   padding: 6px 0 19px;
   border-bottom: 1px solid $grey-border-light;
+  color: $dark-grey;
 
   @include tablet {
     grid-template-columns: 1fr auto auto;
     gap: 23px 52px;
-    border: 1px solid $grey-border-light;
+    padding: 25px 38px;
     border-left: 0;
     border-right: 0;
-    padding: 25px 38px;
   }
 
   @include desktop {
     grid-template-columns: 280px 1fr 1fr 244px;
     gap: 35px;
-    padding: 15px 0;
+    padding: 13px 0;
   }
 }
 
 .additional__name {
   @include subtitle;
+  grid-column: -1 / 1;
   font-size: 16px;
   line-height: 16px;
-  grid-column: -1 / 1;
 
   @include tablet {
     grid-column: 1;
@@ -154,8 +148,8 @@
   }
 
   @include desktop {
-    text-align: left;
     grid-column: 3;
+    text-align: left;
   }
 }
 
@@ -168,10 +162,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient($overlay-green), url("/images/background-image/gift-mobile.jpg");
+  background-image: linear-gradient($overlay-green), url("../images/background-image/gift-bc-mobile@1x.jpg");
 
   @media (min-resolution: 2dppx) {
-    background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-mobile@2x.jpg");
+    background-image: linear-gradient($overlay-green), url("../images/background-image/gift-bc-mobile@2x.jpg");
     background-size: 280px auto;
   }
 
@@ -179,10 +173,10 @@
     height: 200px;
     padding: 60px 80px;
     align-items: center;
-    background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-tablet.jpg");
+    background-image: linear-gradient($overlay-green), url("../../images/background-image/gift-bc-tablet@1x.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-tablet@2x.jpg");
+      background-image: linear-gradient($overlay-green), url("../../images/background-image/gift-bc-tablet@2x.jpg");
       background-size: 707px auto;
     }
   }
@@ -191,10 +185,10 @@
     height: 288px;
     padding: 56px 42px 42px;
     align-items: normal;
-    background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-desktop.jpg");
+    background-image: linear-gradient($overlay-green), url("../../images/background-image/gift-bc-desktop@1x.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: linear-gradient($overlay-green), url("/images/background-image/gift-bc-desktop@2x.jpg");
+      background-image: linear-gradient($overlay-green), url("../../images/background-image/gift-bc-desktop@2x.jpg");
       background-size: 245px auto;
     }
   }
@@ -212,29 +206,29 @@
   background-position: center;
 
   @include tablet {
+    left: 80px;
     width: 80px;
     height: 82px;
-    left: 80px;
   }
 }
 
 .additional__gift-text {
-  color: $basic-white;
   margin: auto 0 0;
   padding: 0 42px;
   text-align: center;
   font-size: 16px;
   line-height: 20px;
+  color: $basic-white;
 
   @include tablet {
-    max-width: 161px;
-    text-align: left;
     margin: 0 10% 0 auto;
     padding: 0;
+    max-width: 161px;
+    text-align: left;
   }
 
   @include desktop {
-    text-align: center;
     margin: auto 0 0;
+    text-align: center;
   }
 }

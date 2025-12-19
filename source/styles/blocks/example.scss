@@ -12,9 +12,7 @@
 
 .example__wrapper {
   @include container;
-  padding-top: 25px;
-  padding-bottom: 40px;
-
+  padding: 27px 20px 40px;
 
   @include tablet {
     display: flex;
@@ -38,34 +36,31 @@
   }
 
   @include desktop {
-    max-width: 40%;
     position: relative;
     margin-bottom: 74px;
+    max-width: 40%;
   }
 }
 
 .example__title {
   @include main-title;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 
   @include tablet {
-    margin-bottom: 60px;
-    margin-top: 44px;
+    margin: 44px 0 60px;
   }
 
   @include desktop {
-    margin-bottom: 74px;
-    margin-top: 0;
+    margin: 0 0 74px;
     width: 100%;
   }
 }
 
 .example__description {
+  margin: 0 0 20px;
   font-size: 14px;
   line-height: 18px;
   color: $dark-grey;
-  margin-bottom: 20px;
-  margin-top: 0;
 
   @include tablet {
     margin-bottom: 39px;
@@ -74,17 +69,16 @@
   }
 
   @include desktop {
-    margin-bottom: 55px;
-    margin-top: 70px;
+    margin: 70px 0 55px;
   }
 }
 
 .example__stats {
   display: grid;
-  padding: 0;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin-bottom: 34px;
+  padding: 0;
 
   @include tablet {
     grid-template-columns: repeat(2, 162px);
@@ -97,18 +91,17 @@
 }
 
 .example__stat {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid $grey-border-light;
   width: 100%;
   min-height: 56px;
-
-  position: relative;
-  border-radius: 4px;
   padding: 14px 20px;
+  border-radius: 4px;
+  border: 1px solid $grey-border-light;
 
   @include tablet {
     width: 162px;
@@ -118,62 +111,62 @@
 
 .example__value {
   @include subtitle;
+  margin-bottom: 4px;
   font-size: 24px;
   line-height: 24px;
-  color: $basic-dark;
-  margin-bottom: 7px;
 
   @include tablet {
-    font-size: 30px;
-    line-height: 37px;
     margin: 0;
     padding-bottom: 6px;
+    font-size: 30px;
+    line-height: 37px;
   }
 }
 
 .example__label {
-  color: $dark-grey;
-  background-color: $bg-grey;
-  padding: 0 10px;
+  position: absolute;
+  bottom: 0;
   margin: 0;
+  padding: 0 10px;
   max-width: 77px;
   font-size: 12px;
   line-height: 12px;
-
-  position: absolute;
+  color: $dark-grey;
+  background-color: $bg-grey;
   transform: translateY(60%);
-  bottom: 0;
 
   @include tablet {
-    background-color: $basic-white;
+    max-width: 145px;
     font-size: 14px;
     line-height: 14px;
-    max-width: 145px;
+    background-color: $basic-white;
+  }
+
+  @include desktop {
+    bottom: 3px;
   }
 }
 
 .example__cost {
   @include subtitle;
-  line-height: 20px;
-  text-align: center;
   margin-bottom: 20px;
+  text-align: center;
+  line-height: 20px;
 
   @include tablet {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-left: auto;
-    margin-bottom: 18px;
-    max-width: 190px;
-    max-height: 73px;
     text-align: end;
     vertical-align: middle;
+    gap: 8px;
+    margin: 0 0 18px auto;
+    max-width: 190px;
+    max-height: 73px;
   }
 
   @include desktop {
     max-width: 100%;
-    margin-left: 0;
-    margin-bottom: 0;
+    margin: 0;
     gap: 3px;
     flex-direction: row;
   }
@@ -181,6 +174,10 @@
 
 .example__cost-value {
   margin-bottom: 7px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
 
   @include desktop {
     margin-left: 63px;
