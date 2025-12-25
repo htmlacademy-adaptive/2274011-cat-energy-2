@@ -64,6 +64,16 @@
   }
 }
 
+.steps__item:first-child {
+  @include tablet {
+    max-width: 230px;
+  }
+
+  @include desktop {
+    max-width: 226px;
+  }
+}
+
 .steps__item::before {
   content: "";
   display: block;

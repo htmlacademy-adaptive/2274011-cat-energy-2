@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding-bottom: 21px;
+  padding-bottom: 24px;
   text-align: center;
   color: $dark-grey;
 
@@ -20,6 +20,16 @@
     justify-content: center;
     background: linear-gradient(to bottom, $basic-white 100px, $light-grey 100px);
     max-width: 245px;
+  }
+}
+
+.card:last-child {
+  background: $basic-white;
+
+  @include tablet {
+    margin-top: 96px;
+    padding-top: 34px;
+    border: 1px solid $grey-border-light;
   }
 }
 
@@ -74,7 +84,7 @@
   }
 
   @include desktop {
-    padding: 5px 30px 15px;
+    padding: 5px 18px 15px;
   }
 }
 

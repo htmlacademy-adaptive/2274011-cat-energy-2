@@ -1,15 +1,15 @@
-.contacts-wrapper {
+.contacts__wrapper {
   @include desktop {
     @include container;
     position: relative;
   }
 }
 
-.contacts-wrapper--bg-color {
+.contacts__wrapper--bg-color {
   background-color: $light-grey;
 
   .contacts__info {
-    background-color: $light-grey;
+    background-color: inherit;
 
     @include desktop {
       background-color: $basic-white;
@@ -44,6 +44,11 @@
 
 .contacts__map-wrapper {
   position: relative;
+  height: 362px;
+
+  @include tablet {
+    height: 400px;
+  }
 }
 
 .contacts__map-wrapper-img {
@@ -127,6 +132,7 @@
   }
 
   @include desktop {
+    gap: 18px;
     text-align: start;
   }
 }

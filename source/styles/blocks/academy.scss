@@ -18,7 +18,7 @@
     width: 27px;
     height: 34px;
     background-color: $dark-grey;
-    mask-image: url("./images/logo/logo-html-academy.svg");
+    mask-image: url("../../images/logo/logo-html-academy.svg");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 27px 34px;
@@ -26,6 +26,18 @@
   }
 
   &:hover {
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
+  &:focus-visible {
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
+  &:focus {
     &::after {
       background-color: $basic-green;
     }

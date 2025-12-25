@@ -9,16 +9,16 @@
   gap: 20px;
 
   @include container;
-
+  padding-bottom: 40px;
 
   @include tablet {
     flex-direction: row;
-    padding: 30px 30px 40px;
+    padding: 43px 30px;
   }
 
   @include desktop {
     align-items: flex-start;
-    padding: 67px 110px 53px;
+    padding: 68px 110px 60px;
   }
 }
 
@@ -33,16 +33,20 @@
 
   @include tablet {
     width: 128px;
-    padding-top: 25px;
+    padding-top: 20px;
     padding-bottom: 14px;
     border-bottom: none;
   }
 
   @include desktop {
-    padding-top: 0;
+    padding-top: 5px;
   }
 
   &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
     opacity: 0.8;
   }
 
@@ -67,6 +71,10 @@
     max-width: 95px;
     gap: 22px;
     padding-left: 39px;
+  }
+
+  @include desktop {
+    padding-top: 7px;
   }
 }
 

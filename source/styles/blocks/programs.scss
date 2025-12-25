@@ -100,7 +100,7 @@
   @include desktop {
     max-width: 100%;
     margin: 0;
-    padding: 39px 0 23px;
+    padding: 41px 0 20px;
   }
 }
 
@@ -117,6 +117,9 @@
 
   @include tablet {
     gap: 22px;
+  }
+
+  @include desktop {
     padding-top: 13px;
   }
 

@@ -21,6 +21,14 @@
     background-color: $basic-green;
   }
 
+  &:focus-visible {
+    background-color: $basic-green;
+  }
+
+  &:focus {
+    background-color: $basic-green;
+  }
+
   &:active {
     background-color: $basic-green;
     opacity: 0.3;

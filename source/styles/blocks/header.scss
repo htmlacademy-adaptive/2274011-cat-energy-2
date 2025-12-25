@@ -19,9 +19,11 @@
   display: flex;
   align-items: center;
   padding-bottom: 9px;
+  gap: 11px;
 
   @include tablet {
     padding-bottom: 0;
+    gap: 0;
   }
 
   @include desktop {
@@ -45,7 +47,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
 
   @include tablet {
     flex-direction: row;
@@ -76,14 +77,13 @@
   }
 }
 
-.header--background {
+.header-wrapper--background {
   position: relative;
 
   .header__hero-title,
   .header__hero-subtitle {
     color: $basic-white;
   }
-
 
   @include tablet {
     .header__hero-title,
@@ -103,7 +103,7 @@
   }
 }
 
-.header--background::after {
+.header-wrapper--background::after {
   content: "";
   position: absolute;
   top: 65px;
@@ -116,7 +116,6 @@
   background-size: 100% auto;
   color: $basic-white;
   z-index: -1;
-
 
   @media (min-resolution: 2dppx) {
     background-image:
@@ -131,19 +130,22 @@
   @include desktop {
     display: block;
     top: 0;
+    right: 0;
+    left: auto;
     width: 50%;
-    height: 100%;
+    height: 694px;
     background-image:
       linear-gradient($overlay-green),
       url("../../images/background-image/hero-bc-desktop@1x.jpg");
-    background-position: 100% 0;
-    background-size: 720px 694px;
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
       background-image:
         linear-gradient($overlay-green),
         url("../../images/background-image/hero-bc-desktop@2x.jpg");
-      background-size: 720px 694px;
+      background-size: cover;
     }
   }
 }

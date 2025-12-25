@@ -7,8 +7,9 @@
   position: relative;
   display: block;
   padding: 0;
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
+  left: 2px;
   background: $basic-white;
   border: none;
   border-radius: 2px;
@@ -24,7 +25,7 @@
   content: "";
   position: absolute;
   left: 0;
-  width: 24px;
+  width: 25px;
   height: 2px;
   background-color: $basic-dark;
   transition: transform 0.25s ease-in-out, top 0.25s ease-in-out, opacity 0.25s ease-in-out;
@@ -42,23 +43,23 @@
   position: absolute;
   left: 0;
   top: 7px;
-  width: 24px;
+  width: 25px;
   height: 2px;
   background-color: $basic-dark;
   transition: opacity 0.25s ease-in-out;
 }
 
-.nav--opened .nav__toggle::before {
+.nav--nojs .nav__toggle::before {
   transform: rotate(45deg);
   top: 11px;
 }
 
-.nav--opened .nav__toggle::after {
+.nav--nojs .nav__toggle::after {
   transform: rotate(-45deg);
   top: 11px;
 }
 
-.nav--opened .nav__toggle span {
+.nav--nojs .nav__toggle span {
   opacity: 0;
 }
 
@@ -79,17 +80,12 @@
   }
 }
 
-.nav--opened .nav__wrapper {
-  display: block;
-}
-
 .nav--nojs .nav__wrapper {
   display: block;
-  position: static;
 }
 
-.nav--nojs .nav__toggle {
-  display: none;
+.nav--js .nav__wrapper {
+  display: block;
 }
 
 .nav__list {
@@ -101,11 +97,12 @@
 
   @include tablet {
     flex-direction: row;
-    gap: 25px;
-    max-width: 440px;
+    gap: 26px;
+    max-width: 460px;
   }
 
   @include desktop {
+    gap: 35px;
     max-width: 580px;
   }
 }
@@ -133,7 +130,7 @@
   text-decoration: none;
   font-size: 20px;
   line-height: 20px;
-  padding: 22px 0;
+  padding: 23px 0;
   transition: opacity 0.25s ease-in-out;
 
   @include tablet {
@@ -143,6 +140,7 @@
   }
 
   @include desktop {
+    padding: 7px 0;
     font-size: 20px;
   }
 
@@ -159,7 +157,7 @@
   border-bottom: none;
 
   @include tablet {
-    padding: 7px 0;
+    padding: 8px 0;
     border-bottom: 2px solid $basic-green;
   }
 }

@@ -1,9 +1,9 @@
 .catalog__wrapper {
   @include container;
-  padding-bottom: 33px;
+  padding-bottom: 30px;
 
   @include tablet {
-    margin-bottom: 57px;
+    margin-bottom: 73px;
   }
 
   @include desktop {
@@ -33,7 +33,7 @@
   display: grid;
   grid-template-columns: 1fr;
   max-width: 100%;
-  gap: 25px;
+  gap: 22px;
   margin: 0;
   padding: 20px 0 0;
   list-style: none;
@@ -46,11 +46,6 @@
 
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
-    gap: 50px 82px;
+    gap: 52px 82px;
   }
-}
-
-.button--secondary {
-  @include button;
-  @include button--secondary;
 }
