@@ -141,7 +141,7 @@
   }
 }
 
-@mixin full-width-line($top-mobile:5px, $top-tablet:16px, $top-desktop:20px) {
+@mixin full-width-line($top-mobile:5px, $top-tablet:14px, $top-desktop:18px) {
   position: relative;
   --scrollbar-width: 17px;
   width: 100%;

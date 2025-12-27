@@ -70,14 +70,6 @@
   z-index: 1;
 }
 
-.contacts--nojs .contacts__map-wrapper-iframe {
-  display: none;
-}
-
-.contacts--js .contacts__map-wrapper-img {
-  display: none;
-}
-
 .contacts__map-img {
   display: block;
   width: 100%;
@@ -143,4 +135,12 @@
 
 .contacts__address-city {
   margin: 0;
+}
+
+.contacts--js.contacts__map-wrapper-img {
+  display: none;
+}
+
+.contacts--nojs.contacts__map-wrapper-iframe {
+  display: none;
 }

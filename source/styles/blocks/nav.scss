@@ -3,13 +3,15 @@
   z-index: 1;
 }
 
-.nav__toggle {
-  position: relative;
+.nav--js .nav__toggle {
+  position: absolute;
+  top: 20px;
+  left: auto;
+  right: 18px;
   display: block;
   padding: 0;
-  width: 25px;
+  width: 27px;
   height: 25px;
-  left: 2px;
   background: $basic-white;
   border: none;
   border-radius: 2px;
@@ -20,8 +22,8 @@
   }
 }
 
-.nav__toggle::before,
-.nav__toggle::after {
+.nav--js .nav__toggle::before,
+.nav--js .nav__toggle::after {
   content: "";
   position: absolute;
   left: 0;
@@ -31,15 +33,7 @@
   transition: transform 0.25s ease-in-out, top 0.25s ease-in-out, opacity 0.25s ease-in-out;
 }
 
-.nav__toggle::before {
-  top: -1px;
-}
-
-.nav__toggle::after {
-  top: 15px;
-}
-
-.nav__toggle span {
+.nav--js .nav__toggle span {
   position: absolute;
   left: 0;
   top: 7px;
@@ -49,24 +43,36 @@
   transition: opacity 0.25s ease-in-out;
 }
 
-.nav--nojs .nav__toggle::before {
+.nav--js .nav__toggle::before {
+  top: -1px;
+}
+
+.nav--js .nav__toggle::after {
+  top: 15px;
+}
+
+.nav--js.nav--opened .nav__toggle::before {
   transform: rotate(45deg);
   top: 11px;
 }
 
-.nav--nojs .nav__toggle::after {
+.nav--js.nav--opened .nav__toggle::after {
   transform: rotate(-45deg);
   top: 11px;
 }
 
-.nav--nojs .nav__toggle span {
+.nav--js.nav--opened .nav__toggle span {
   opacity: 0;
+}
+
+.nav--nojs .nav__toggle {
+  display: none;
 }
 
 .nav__wrapper {
   display: none;
   position: absolute;
-  top: 64px;
+  top: 62px;
   left: 0;
   right: 0;
   background-color: $basic-white;
@@ -82,9 +88,19 @@
 
 .nav--nojs .nav__wrapper {
   display: block;
+  position: relative;
+  top: 0;
 }
 
 .nav--js .nav__wrapper {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.nav--js.nav--opened .nav__wrapper {
   display: block;
 }
 
@@ -97,7 +113,7 @@
 
   @include tablet {
     flex-direction: row;
-    gap: 26px;
+    gap: 28px;
     max-width: 460px;
   }
 
@@ -105,6 +121,16 @@
     gap: 35px;
     max-width: 580px;
   }
+}
+
+.nav__list--light .nav__link {
+  @include desktop {
+    color: $basic-white;
+  }
+}
+
+.nav__list--light .nav__item--active .nav__link {
+  border-bottom: 2px solid $basic-white;
 }
 
 .nav__item {
@@ -130,13 +156,13 @@
   text-decoration: none;
   font-size: 20px;
   line-height: 20px;
-  padding: 23px 0;
+  padding: 23px 0 22px;
   transition: opacity 0.25s ease-in-out;
 
   @include tablet {
     font-size: 18px;
     line-height: 24px;
-    padding: 7px 5px;
+    padding: 7px 4px;
   }
 
   @include desktop {
